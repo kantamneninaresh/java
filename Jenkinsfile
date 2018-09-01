@@ -5,5 +5,6 @@ pipeline{
       withMaven(maven :"localMaven"){
         sh "mvn --version"
     }
+    }
   }
 }
