@@ -1,4 +1,4 @@
-node("ccone-slave") {
+node("") {
   def testUtils = load('Test.groovy')
   
   testUtils.call("hi"){
