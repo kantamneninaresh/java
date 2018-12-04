@@ -5,8 +5,9 @@ pipeline{
       steps{
       withMaven(maven :'localMaven'){
         sh 'mvn --version'
-        Test("hi"){
         echo("executed")
+        Test("hi"){
+        sh 'mvn --version'
         }
         }
       }
