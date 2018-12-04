@@ -1,5 +1,5 @@
 node("") {
-  def testUtils = load('Test.groovy')
+  def testUtils = new Test()
   
   testUtils("hi"){
   echo("executed")
