@@ -3,6 +3,7 @@
 node {
   withTMVaultCredentials("hi"){
     echo("executed")
+    echo "$SECRET_ID"
     }
   }
 
