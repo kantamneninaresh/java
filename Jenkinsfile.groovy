@@ -1,8 +1,9 @@
 #!groovy
-def testUtils = new Test()
+def testUtils = load("Test.groovy");
 node("") {
-  
-  testUtils("hi"){
+  stage('Preparation') {
+  call("hi"){
   echo("executed")
+  }
   }
 }
