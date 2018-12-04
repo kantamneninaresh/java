@@ -1,10 +1,9 @@
 #!groovy
-def testUtils
+
 node {
-  stage('Preparation') {
-    testUtils = load('Test.groovy')
+  def rootDir = pwd()
+ def tools = load "${rootDir}\\Test.groovy"
   call("hi"){
-  echo("executed")
+    echo("executed")
+    }
   }
-  }
-}
