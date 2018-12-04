@@ -1,3 +1,5 @@
+#!groovy
+
 def call(datacenter, Closure body) {
     static final String VAULT_APPSECRET_KEY_PREFIX = 'tm.vault.appsecret.'
 
