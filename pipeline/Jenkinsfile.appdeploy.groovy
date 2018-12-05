@@ -1,8 +1,13 @@
 #!groovy
 
-node("") {
 
-    def mavenHome
+
+
+
+
+        node("") {
+            try{
+                def mavenHome
     def deploymentUtils
 
     final String APP_NAME = 'org-management'
@@ -11,10 +16,6 @@ node("") {
     final String CF_SPACE = 'app'
     final String DEPLOYMENT = 'dev'
     final String APP_NAME_PREFIX = 'green-'
-
-    try {
-
-        node("") {
             stage('Preparation') {
                 checkout scm
                 deploymentUtils = load('pipeline/utils/DeploymentUtils.groovy')
@@ -39,4 +40,4 @@ node("") {
         currentBuild.result = "FAILURE"
         throw error
     }
-}
+
