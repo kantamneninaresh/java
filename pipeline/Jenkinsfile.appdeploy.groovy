@@ -1,6 +1,6 @@
 #!groovy
 
-node("ccone-slave") {
+node("") {
 
     def mavenHome
     def deploymentUtils
