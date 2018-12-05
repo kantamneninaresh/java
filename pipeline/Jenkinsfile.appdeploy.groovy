@@ -14,7 +14,7 @@ node("") {
 
     try {
 
-        node("ccone-slave") {
+        node("") {
             stage('Preparation') {
                 checkout scm
                 deploymentUtils = load('pipeline/utils/DeploymentUtils.groovy')
