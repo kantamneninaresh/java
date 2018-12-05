@@ -6,7 +6,7 @@ def appPackageDeploy(deployment, cfOrg, cfSpace, appBase, appName, appNamePrefix
 def runDeployScript(deployment, cfOrg, cfSpace, appBase, appName, appNamePrefix) {
     withTMVaultCredentials(getDatacenterFromDeployment(deployment)) {
         sh """
-            cd /build
+            cd ./build
             ./tmdeploy.sh -d "$deployment" -o "$cfOrg" -s "$cfSpace" -b "$appBase" -a "$appName" \
                 -x "$appNamePrefix" -r "$VAULT_TM_ROLE_ID" -t "$VAULT_TM_SECRET_ID"
         """
