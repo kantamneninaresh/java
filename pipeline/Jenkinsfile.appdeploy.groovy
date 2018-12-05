@@ -27,10 +27,10 @@
             ]) {
                 //app deploy
                 stage("dev-deploy"){
-                    dir(APP_BASE){
+            
                         
                         deploymentUtils.appPackageDeploy(DEPLOYMENT, CF_ORG, CF_SPACE,APP_BASE, APP_NAME, APP_NAME_PREFIX)
-                    }
+                    
                 }
                 currentBuild.result = "SUCCESS"
             }
