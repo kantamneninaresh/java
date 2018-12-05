@@ -5,9 +5,9 @@
 
 
 
-        node("") {
-            try{
-                def mavenHome
+ node("") {
+
+    def mavenHome
     def deploymentUtils
 
     final String APP_NAME = 'org-management'
@@ -35,9 +35,5 @@
                 currentBuild.result = "SUCCESS"
             }
         }
-    }
-    catch (error) {
-        currentBuild.result = "FAILURE"
-        throw error
-    }
+    
 
