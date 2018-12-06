@@ -1,6 +1,6 @@
 domain=devus1.ciscoccservice.com
 datacenter=devus1
-vault_cf_path=secret/devus1/cloudfoundry/tenant-management
+vault_cf_path=secret/devus1/cloudfoundry/tenantmanagement
 
 appname_prefix=green-
 
