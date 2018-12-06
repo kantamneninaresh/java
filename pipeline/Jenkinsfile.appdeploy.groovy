@@ -16,6 +16,7 @@
     final String CF_SPACE = 'app'
     final String DEPLOYMENT = 'dev'
     final String APP_NAME_PREFIX = 'green-'
+      try {
             stage('Preparation') {
                 checkout scm
                 deploymentUtils = load('pipeline/utils/DeploymentUtils.groovy')
@@ -34,6 +35,11 @@
                 }
                 currentBuild.result = "SUCCESS"
             }
-        }
+           }
+    catch (error) {
+        currentBuild.result = "FAILURE"
+        throw error
+    }
+}
     
 
