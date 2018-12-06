@@ -32,7 +32,7 @@ USAGE
 }
 
 set -exv
-source "install_vault.sh"
+
 
 ## MAIN
 while getopts "d:D:a:A:b:B:x:X:r:R:t:T:o:O:s:S:hH" OPTION
